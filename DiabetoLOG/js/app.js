@@ -61,6 +61,9 @@ window.app = window.app || {};
         console.log('onNavTintClick event');
     }
 
+    function onNavHeartIconClick() {
+        console.log('onNavTintClick event');
+    }
     /**
      * Registers event listeners.
      *
@@ -69,6 +72,7 @@ window.app = window.app || {};
      */
     function bindEvents() {
         navTintIcon.addEventListener('click', onNavTintIconClick);
+        navHeartIcon.addEventListener('click', onNavHeartIconClick);
     }
 
     /**
