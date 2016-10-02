@@ -7,8 +7,42 @@ h1 {
     text-align: center;
 }
 
+p {
+    margin: 0;
+}
+
 img {
     height: 40px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #808080;
+    border-radius: 15px;
+    width: 80%;
+    margin: 10px;
+    font-size: 14px;
+}
+
+input:focus {
+    border: 2px solid #808080;
+}
+
+input:focus {
+    outline-color: #fff;
+}
+
+input:active {
+    outline-style: none;
+}
+
+input:active {
+    outline-color: #fff;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
 }
 
 .card {
