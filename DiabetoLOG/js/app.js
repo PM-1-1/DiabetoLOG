@@ -4,6 +4,7 @@
  * Main application module.
  * Handles application life cycle.
  *
+ * @author <piotr.maziak@gmail.com>
  * @module app
  * @namespace app
  */
@@ -18,6 +19,7 @@ window.app = window.app || {};
     /**
      * Navigation tint icon.
      *
+     * @name navTintIcon
      * @memberof app
      * @private
      * @type {HTMLElement}
@@ -47,13 +49,14 @@ window.app = window.app || {};
          *
          * @memberof app
          * @private
-         * @type {null}
+         * @type {HTMLElement}
          */
         navSaveIcon = null;
 
     /**
      * Handles click event on navigation tint icon.
      *
+     * @function
      * @memberof app
      * @private
      */
@@ -61,9 +64,36 @@ window.app = window.app || {};
         console.log('onNavTintClick event');
     }
 
+    /**
+     * Handles click event on navigation heart icon.
+     *
+     * @memberof app
+     * @private
+     */
     function onNavHeartIconClick() {
         console.log('onNavTintClick event');
     }
+
+    /**
+     * Handles click event on navigation PDF icon.
+     *
+     * @memberof app
+     * @private
+     */
+    function onNavPdfIconClick() {
+        console.log('onNavPdfIconClick event');
+    }
+
+    /**
+     * Handles click event on navigation save icon.
+     *
+     * @memberof app
+     * @private
+     */
+    function onNavSaveIconClick() {
+        console.log('onNavSaveIconClick');
+    }
+
     /**
      * Registers event listeners.
      *
@@ -73,6 +103,8 @@ window.app = window.app || {};
     function bindEvents() {
         navTintIcon.addEventListener('click', onNavTintIconClick);
         navHeartIcon.addEventListener('click', onNavHeartIconClick);
+        navPdfIcon.addEventListener('click', onNavPdfIconClick);
+        navSaveIcon.addEventListener('click', onNavSaveIconClick);
     }
 
     /**
