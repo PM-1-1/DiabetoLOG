@@ -51,7 +51,9 @@ window.app = window.app || {};
          * @private
          * @type {HTMLElement}
          */
-        navSaveIcon = null;
+        navSaveIcon = null,
+        sugarSection = null,
+        bloodSection = null;
 
     /**
      * Handles click event on navigation tint icon.
@@ -61,7 +63,11 @@ window.app = window.app || {};
      * @private
      */
     function onNavTintIconClick() {
-        console.log('onNavTintClick event');
+        if (sugarSection.classList.contains('hidden')) {
+            sugarSection.classList.remove('hidden');
+        }
+
+        bloodSection.classList.add('hidden');
     }
 
     /**
@@ -71,7 +77,11 @@ window.app = window.app || {};
      * @private
      */
     function onNavHeartIconClick() {
-        console.log('onNavTintClick event');
+        if (bloodSection.classList.contains('hidden')) {
+            bloodSection.classList.remove('hidden');
+        }
+
+        sugarSection.classList.add('hidden');
     }
 
     /**
@@ -118,6 +128,8 @@ window.app = window.app || {};
         navHeartIcon = document.getElementById('nav-heart');
         navPdfIcon = document.getElementById('nav-pdf');
         navSaveIcon = document.getElementById('nav-save');
+        sugarSection = document.querySelector('.sugar');
+        bloodSection = document.querySelector('.blood');
         bindEvents();
     }
 
