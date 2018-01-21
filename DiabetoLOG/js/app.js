@@ -91,6 +91,7 @@ window.app = window.app || {};
      * @private
      */
     function onNavPdfIconClick() {
+        app.utils.dispatchEvent('app.NavPdfIconClick', {test: "Testowe Dane"});
         console.log('onNavPdfIconClick event');
     }
 
@@ -131,6 +132,7 @@ window.app = window.app || {};
         sugarSection = document.querySelector('.sugar');
         bloodSection = document.querySelector('.blood');
         bindEvents();
+        app.controller.init();
     }
 
     window.addEventListener('load', init);
