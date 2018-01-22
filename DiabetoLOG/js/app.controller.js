@@ -26,8 +26,15 @@ window.app = window.app || {};
      * @private
      */
     function onNavPdfIconPressed(e) {
-        console.log("PDF Pressed");
-        console.log(e.detail.test);
+        console.log("Controller przekazuje do modelu zadanie generowania PDF:");
+        console.log("POZIOM CUKRU");
+        console.log("Data pomiaru: " + e.detail.data_pomiaru_cukru +" Poziom cukru: " + e.detail.poziom_cukru);
+        console.log("POZIOM CISNIENIA");
+        console.log("Data pomiaru cisnienia: " + e.detail.data_pomiaru_cisnienia);
+        console.log("Cisnienie skurczowe: "    + e.detail.cisnienie_skurczowe);
+        console.log("Cisnienie rozkurczowe: "  + e.detail.cisnienie_rozkurczowe);
+
+        app.utils.dispatchEvent('controller.onNavPdfIconPressed',e.detail);
     }
 
 
